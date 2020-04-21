@@ -1,0 +1,12 @@
+Steps To Detection:-
+--------------------
+1-Read Image RGB
+2-Convert to YUV
+3-Split color Channel and take v (to spceify Redness)
+4-apply Binary Threshold on image(Take threshold=150)
+5-apply Morphology by kernel size(3,3)
+6-find Contours
+7-select the Sign Contour(i will generalize it and take the biggest contours but now i select it manually)
+8-get coordinates x,y,w,h of boundray Box which include the Sign Contour
+9-crop the sign from image by boundray Box Coordinate
+10-apply CNN on sign image , Classifier predict it 0 (Refer to Stop Sign) 
